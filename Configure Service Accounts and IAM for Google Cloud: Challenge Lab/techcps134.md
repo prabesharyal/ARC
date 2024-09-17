@@ -32,6 +32,13 @@ sudo chmod +x techcps1.sh
 
 ## Perform the lab from video instructions
 
+### First Do this
+In Cloud Shell : 
+```
+export ZONE=
+export PROJECT_ID=
+gcloud compute instances create bigquery-instance --zone=$ZONE --machine-type=e2-medium --image-family=debian-11 --image-project=debian-cloud --service-account=bigquery-qwiklab@$PROJECT_ID.iam.gserviceaccount.com --scopes=https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/cloud-platform```
+
 ```
 curl -LO raw.githubusercontent.com/Techcps/ARC/master/Configure%20Service%20Accounts%20and%20IAM%20for%20Google%20Cloud%3A%20Challenge%20Lab/techcps2.sh
 sudo chmod +x techcps2.sh
